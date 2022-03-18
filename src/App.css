@@ -33,6 +33,12 @@ body {
   margin: 10px;
 }
 
+.details-card {
+  color: white;
+  font-size: 12px;
+  text-align: left;
+}
+
 .startship-list:link {
   text-decoration: none;
 }
@@ -49,5 +55,11 @@ body {
 
 #main {
   margin-top: 50px;
+}
 
+#details-main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

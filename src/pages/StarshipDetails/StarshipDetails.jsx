@@ -16,35 +16,43 @@ const StarshipDetails = (props) => {
   }, [])
 
   return (
-    <>
-      <button className='details-card'>
-        <h4>NAME: {starshipDetails.name}</h4>
-        <h4>MODEL: {starshipDetails.model}</h4>
-        <h4>
-
-            <Link
-                      style={{ color: '#FFF' }}
-                      to="/"
-            >
-              RETURN
-            </Link>
-
-        </h4>
-      </button>
-      {/* <h4>Actions:</h4>
-      {starshipDetails.actions ?
-      <>
-        {starshipDetails.actions.map(action => 
-          <div key={action.name}>
-            <h4 >{action.name}</h4>
-            <h5>{action.desc}</h5>
-          </div>
-        )}
-      </>
-      :
-      <p>This poor starship has no actions. Womp womp.</p>
-      } */}
-    </>
+    <div id='details-main'>
+      { starshipDetails.name ? 
+        <>
+          <button className='details-card'>
+            <h4>NAME: {starshipDetails.name}</h4>
+            <h4>MODEL: {starshipDetails.model}</h4>
+            <h4>CREW: {starshipDetails.crew}</h4>
+          
+          {/* <h4>Pilots:</h4>
+          {starshipDetails.pilots ?
+            <>
+            {starshipDetails.pilots.map(pilot => 
+              <div key={action.name}>
+              <h4 >{action.name}</h4>
+              <h5>{action.desc}</h5>
+              </div>
+              )}
+              </>
+              :
+              <p>This poor starship has no actions. Womp womp.</p>
+            } */}
+            <h4>
+                <Link
+                          style={{ color: '#FFF' }}
+                          to="/"
+                >
+                  RETURN
+                </Link>
+            </h4>
+          </button>
+        </>
+        :
+        <>
+          <p>Loading starship details...</p>
+        </>
+      }
+    </div>
   );
 }
  
