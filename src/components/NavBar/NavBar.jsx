@@ -1,15 +1,16 @@
 const NavBar = (props) => {
   return (
     <header className="App-header">
-      <img 
-        src="/images/logo.svg" 
-        alt="logo" 
-        className="App-logo"
-        style={{ width: "100px", height: "100px" }}
-      />
-        {props.navItems.map((navItem, idx) =>
-          <a key={idx} href={navItem.url}>{navItem.name}</a>
-        )}
+      <a href="/" >
+        <img 
+          display="inline"
+          src="/images/logo.svg" 
+          alt="logo" 
+          className="App-logo"
+          style={{ width: "200px", height: "200px" }}
+        />
+      </a>
+        <h1>Star Wars Starships</h1>
     </header>
   );
 }
